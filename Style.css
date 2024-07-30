@@ -1,0 +1,23 @@
+﻿body {
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+
+pre {
+    font-size: 0.5em; 
+    line-height: 1em;
+    white-space: pre-wrap; 
+    overflow-x: auto;
+    color: white;
+}
+
+.Hidden {
+    color: black;
+    font-size: 8em;
+}
+
+.Quote {
+    font-size: 5em;
+}
