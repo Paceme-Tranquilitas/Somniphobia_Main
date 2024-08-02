@@ -11,6 +11,7 @@ pre {
     white-space: pre-wrap; 
     overflow-x: auto;
     color: white;
+    scrollbar-width: 0;
 }
 
 .Hidden {
