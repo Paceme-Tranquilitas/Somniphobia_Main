@@ -1,7 +1,8 @@
-﻿body {
+body {
     text-align: center;
     color: white;
     background-color: black;
+    
 }
 
 
@@ -11,7 +12,7 @@ pre {
     white-space: pre-wrap; 
     overflow-x: auto;
     color: white;
-    scrollbar-width: 0;
+    
 }
 
 .Hidden {
@@ -22,3 +23,4 @@ pre {
 .Quote {
     font-size: 5em;
 }
+
