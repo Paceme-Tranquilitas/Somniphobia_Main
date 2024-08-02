@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const asciiContainer = document.getElementById('ascii');
     const ctx = canvas.getContext('2d', { willReadFrequently: true });
 
-    const charMap = ['@', '#', '%', '?', '*', '+', ';', ':', ' ', '.'];
+    //const charMap = [' ', '.', ':', 'o' , 'p' , '#', '$', '[]'];
+    const charMap = [' ', 's', 'o', 'm' , 'n' , 'I', 'P', 'H' , 'O' , 'B' , 'A' ];
 
     video.addEventListener('loadedmetadata', () => {
         canvas.width = video.videoWidth;
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     video.addEventListener('play', () => {
-        const frameRate = 60; // Frames per second
+        const frameRate = 60;
         setInterval(() => {
             if (!video.paused && !video.ended) {
                 ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -35,8 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const g = frame.data[offset + 1];
                 const b = frame.data[offset + 2];
                 const brightness = (r + g + b) / 3;
-                const invertedBrightness = 255 - brightness;
-                const charIndex = Math.floor((invertedBrightness / 255) * (charMapLength - 1));
+                const charIndex = Math.floor((brightness / 255) * (charMapLength - 1));
                 asciiString += charMap[charIndex];
             }
             asciiString += '\n';
@@ -44,4 +44,3 @@ document.addEventListener('DOMContentLoaded', () => {
         return asciiString;
     }
 });
-//Thank you Acerola!
